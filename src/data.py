@@ -1,4 +1,5 @@
 import re
+import secrets
 
 # Constants for SSLAdapter
 CIPHERS = [
@@ -46,7 +47,7 @@ AUTH_DATA = {
     "acr_values": "urn:riot:bronze",
     "claims": "",
     "client_id": "riot-client",
-    "nonce": "oYnVwCSrlS5IHKh7iI16oQ",
+    "nonce": generate_nonce(22),
     "redirect_uri": "http://localhost/redirect",
     "response_type": "token id_token",
     "scope": "openid link ban lol_region"
