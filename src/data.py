@@ -42,6 +42,11 @@ ERROR_RATE_LIMITED = 1
 ERROR_MULTI_FACTOR_AUTH = 3
 ERROR_CLOUDFLARE = 5
 
+# Function to generate a random nonce of specified length
+def generate_nonce(length):
+    characters = string.ascii_letters + string.digits
+    return ''.join(secrets.choice(characters) for _ in range(length))
+
 # Auth Data for authentication request
 AUTH_DATA = {
     "acr_values": "urn:riot:bronze",
